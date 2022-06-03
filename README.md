@@ -63,6 +63,8 @@ The above steps were then finally repeated for Manufacturing Lot 3. The t-test r
 
 Here our p-value of 0.041 is less than our significance level. We have enough evidence to reject our null hypothesis. This means that there is evidence to show that the PSI for Manufacturing lot 3 is statistically different than our expected population mean.
 
+## Study Design: MechaCar vs Competition
+
  
  
 
