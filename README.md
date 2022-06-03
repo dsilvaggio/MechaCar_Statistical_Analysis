@@ -28,3 +28,42 @@ In order to determine if each lot met this requirement individually, the results
 
 Lot 1 and Lot 2 both have a variance that falls way below the 100 pounds per square inch threshold, so both of these lots do meet the design specificiation. However, lot 3 has a variance that is way above the threshold. This lot does not meet the design specificiation and shows evidence of an inconsistent manufacturing process.
 
+## T-Tests on Suspension Coils
+R was used to run different t-tests to determine if the PSI for all of the manufacturing lots and each lot individually is statistically different from our expected population mean of 1,500 pounds per square inch.
+### Assumptions
+Before running the t-tests, I checked to make sure that our data passed all five of our assumptions for a one-sample t-test. The PSI data is numerical and continuous. Our sample data were selected randomly using the sample_n() function in r. The sample size used was 50 which is relatively large, and the variance of our data is similar. Lastly, I tested if our data is normally distributed by graphing the PSI data using the geom_density() function on R. The density plot (shown below) does look like a normal bell curve with roughly equal amounts of data on both sides of the mean. 
+
+![This is an image](https://github.com/dsilvaggio/MechaCar_Statistical_Analysis/blob/main/Resources/Screen%20Shot%202022-06-03%20at%203.37.33%20PM.png)
+
+### PSI across all Manufacturing Lots
+The first t-test performed tested if the PSI from all manufacturing lots was statistically different from the population mean of 1,500 pounds per square inch. A random sample of 50 was taken from our original suspension data. The significance level used for this test was 0.05. Our t-test results showed the following:
+
+![This is an image](https://github.com/dsilvaggio/MechaCar_Statistical_Analysis/blob/main/Resources/Screen%20Shot%202022-06-03%20at%203.41.38%20PM.png)
+
+Our p-value of 0.2173 was greater than our significance level, thus we failed to reject the null hypothesis. In other words, there is not enough evidence to say that these means are statistically different. 
+
+### PSI from Lot 1
+The next t-test performed tested if the PSI from just Manufacturing Lot 1 was statistically different from the population mean(1,500 pounds per square inch). A subset of our data was taken to get only the data from lot 1. The significance level used for this test was again 0.05. Our t-test results showed the following:
+
+![This is an image](https://github.com/dsilvaggio/MechaCar_Statistical_Analysis/blob/main/Resources/Screen%20Shot%202022-06-03%20at%203.47.10%20PM.png)
+
+Our p-value of 1 was much greater than our significance level, thus we failed to reject the null hypothesis. In other words, there is not enough evidence to say that the PSI from Lot 1 is statistically different from the population mean.
+
+### PSI from Lot 2
+The above steps were then repeated for Manufacturing Lot 2. The t-test results show the following:
+
+![This is an image](https://github.com/dsilvaggio/MechaCar_Statistical_Analysis/blob/main/Resources/Screen%20Shot%202022-06-03%20at%203.49.57%20PM.png)
+
+Similarly to Lot 1, our p-value of 0.6072 was much greater than our significance level, thus we failed to reject the null hypothesis. There was also not enough evidence to say that the PSI from Lot 2 is statistically different from the population mean.
+
+### PSI from Lot 3
+The above steps were then finally repeated for Manufacturing Lot 3. The t-test results for this lot showed something rather interesting:
+
+![This is an image](https://github.com/dsilvaggio/MechaCar_Statistical_Analysis/blob/main/Resources/Screen%20Shot%202022-06-03%20at%203.51.57%20PM.png)
+
+Here our p-value of 0.041 is less than our significance level. We have enough evidence to reject our null hypothesis. This means that there is evidence to show that the PSI for Manufacturing lot 3 is statistically different than our expected population mean.
+
+ 
+ 
+
+
