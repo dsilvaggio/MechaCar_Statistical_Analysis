@@ -64,6 +64,16 @@ The above steps were then finally repeated for Manufacturing Lot 3. The t-test r
 Here our p-value of 0.041 is less than our significance level. We have enough evidence to reject our null hypothesis. This means that there is evidence to show that the PSI for Manufacturing lot 3 is statistically different than our expected population mean.
 
 ## Study Design: MechaCar vs Competition
+To determine how the MechaCar performs against the competition, we can design a statistical study to test specific metrics. The metric that I chose to test is the safety rating.
+
+The following hypothesis would be used to perform my test:
+
+H0: There is no difference in the frequency distribution of the safety rating between both groups.
+
+Ha: There is a difference in the frequency distribution of the safety rating between both groups. 
+
+To test this hypothesis, I would need to use a chi-squared test because both my independent variable (vehicle type) and dependent variable (safety rating) are categorical data types. I would test this hypothesis against a significance level of 0.05. 
+I would need to collect data on the safety ratings of the Mechacars and different types of competitor vehicles. A few examples of different vehicle types would be pickups, minivans, sedans, SUVs, etc. After collecting this data I would use R and the chisq.test() function to calculate the p-value and either reject or fail to reject the null hypothesis.   
 
  
  
